@@ -11,7 +11,12 @@ const counterReducer = (state = initialState, action) => {
       return { value: state.value + 1 };
 
     // TODO handle case actionTypes.DECREMENT:
-
+    case actionTypes.DECREMENT:
+      return { value: state.value - 1 };
+    
+    case actionTypes.RESET:
+      return initialState
+      
     default:
       return state;
   }
